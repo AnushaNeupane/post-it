@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+{% block title %}Post-It{% endblock %} 
+{% block body%}
+
+<div class="slide-content">
+
+<img class="mySlides" src="https://www.brainyquote.com/photos_tr/en/h/helenkeller/101301/helenkeller1-2x.jpg" style="width:100%; height:620px">
+<img class="mySlides" src="https://wanderingwheatleys.com/wp-content/uploads/2017/09/most_dangerous_risk_travel_inspirational_quotes_cover_image.jpg" style="width:100%; height:620px">
+<img class="mySlides" src="https://www.brainyquote.com/photos_tr/en/s/stjerome/389605/stjerome1.jpg" style="width:100%; height:620px">
+<img class="mySlides" src="https://pilbox.themuse.com/image.png?url=https%3A%2F%2Fassets.themuse.com%2Fuploaded%2Fattachments%2F24498.png%3Fv%3Daed46aea030193a94f72b0c8a4573a32ba452188ff518f22cc098d8e5809d075&h=367&prog=1" style="width:100%; height:620px">
+
+<a class="btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+<a class="btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+
+</div>
+<div class="mob-main">
+  <img src="https://wanderingwheatleys.com/wp-content/uploads/2017/09/most_dangerous_risk_travel_inspirational_quotes_cover_image.jpg" class="img-responsive">
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+var autoslideIndex = 0;
+magic();
+
+function magic() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    autoslideIndex++;
+    if (autoslideIndex > slides.length) {autoslideIndex = 1}
+    slides[autoslideIndex-1].style.display = "block";
+    setTimeout(magic, 7500);
+}
+</script>
+
+{%endblock%}

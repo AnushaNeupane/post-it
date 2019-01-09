@@ -1,0 +1,39 @@
+Program features:
+
+Follow the instructions on https://cloud.google.com/appengine/docs/standard/python/download to install Cloud SDK for python
+
+To first start the server, go inside the post-it directory
+
+run dev_appserver.py app.yaml to run the server locally
+
+app.yaml contains the information about directories and libraries for the project
+
+Go to localhost:8000 for data store.
+
+Go to localhost:8080 for the program.
+
+Go to signup to register an account and then login.
+
+User can still use posting and viewing quotes features as user "Sneaky Ninja".
+
+Go to post navigation menu to post inspirational quotes.
+
+Go to quotes to view all the quotes posted.
+
+Go to the dropdown at the right of hi {{user}} to see:
+	1> my profile: shows information about logged in user
+	2> my quotes: shows all the quotes posted by logged user
+	3> logout: logs the user out
+
+Go to frequency to see the words and their frequencies in the quotes.
+
+To depoloy register a project on https://console.cloud.google.com/
+
+Follow instruction on https://cloud.google.com/appengine/docs/standard/python/getting-started/deploying-the-application to deploy the application
+
+Run gcloud app deploy app.yaml
+
+Go to https://post-it-219419.appspot.com/
+
+
+
